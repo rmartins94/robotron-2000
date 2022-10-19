@@ -1,12 +1,18 @@
-//const robotron = document.querySelector(".robo");
-const subtrair = document.querySelector("#subtrair");
-const somar = document.querySelector("#somar");
-const braco = document.querySelector("#braco");
+const controle = document.querySelectorAll(".controle-ajuste");
 
-somar.addEventListener("click", (evento) => {
-    braco.value = parseInt(braco.value) + 1;
+controle.forEach( (element) => {
+    element.addEventListener("click", (event) => {
+        manipulaDados(event.target.textContent, event.target.parentNode);
+    })
 });
 
-subtrair.addEventListener("click", (evento) => {
-    braco.value = parseInt(braco.value) + 1;
-});
+function manipulaDados(operacao, controle){
+    const peca = controle.querySelector(".controle-contador");
+
+    if (operacao === "-") {
+        peca.value = parseInt(peca.value) - 1;
+    } else {
+        peca.value = parseInt(peca.value) + 1;
+
+    }
+}
