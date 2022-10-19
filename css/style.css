@@ -209,6 +209,30 @@ main {
     margin: 10px 0 0;
 }
 
+.botoes {
+position: relative;
+right: 5%;
+bottom: 10%;
+display: flex;
+cursor: pointer;
+
+}
+
+.trocar-cor:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.trocar-cor {
+    margin: 10px;
+    width: auto;
+    background-color: #FFFFFF;
+    align-items: center;
+    font-size: 18px;
+    
+
+}
+
 @media screen and (max-width: 1600px) {
     body { 
         font-size: 14px;

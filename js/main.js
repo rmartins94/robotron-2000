@@ -56,3 +56,7 @@ function atualizaEstatistica (peca) {
         element.textContent = parseInt(element.textContent) + pecas[peca][element.dataset.estatistica]
     })
 }
+
+function trocaImagem (cor) {
+    document.querySelector(".robo").src="img/cores-robotron/Robotron 2000 - " + cor + ".png"
+}
